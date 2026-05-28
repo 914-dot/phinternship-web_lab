@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li class="dropdown">
                         <a href="internship_info.html" class="dropbtn">實習資訊 ▼</a>
                         <ul class="dropdown-content">
-                            <li><a href="#">實習說明</a></li>
-                            <li><a href="#">實習時程</a></li>
-                            <li><a href="#">評分方式</a></li>
-                            <li><a href="#">相關辦法</a></li>
+                            <li><a href="internship_info.html#section-info">實習說明</a></li>
+                            <li><a href="internship_info.html#section-timeline">實習時程</a></li>
+                            <li><a href="internship_info.html#section-grading">評分方式</a></li>
+                            <li><a href="internship_info.html#section-rules">相關辦法</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -51,9 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li class="dropdown">
                         <a href="advocacy.html" class="dropbtn">宣導資料 ▼</a>
                         <ul class="dropdown-content">
-                            <li><a href="#">性平宣導</a></li>
-                            <li><a href="#">勞安宣導</a></li>
-                            <li><a href="#">校內輔導資源</a></li>
+                            <li><a href="advocacy.html#section-gender">性平宣導</a></li>
+                            <li><a href="advocacy.html#section-safety">勞安宣導</a></li>
+                            <li><a href="advocacy.html#section-resources">校內輔導資源</a></li>
                         </ul>
                     </li>
                 </ul>
