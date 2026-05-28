@@ -1,0 +1,96 @@
+/* ==========================================================================
+   實習資訊頁面專屬外觀樣式 (internship_style.css)
+   ========================================================================== */
+
+.section-desc-text {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* 1. 課程說明區精美字卡 */
+.info-card-box {
+    background-color: #fff;
+    border-left: 4px solid #5c6bc0;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    margin-bottom: 20px;
+}
+
+.info-card-box p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.info-card-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* 2. 右側時程時間軸排版 */
+.timeline-box {
+    border-left: 2px solid #5c6bc0;
+    padding-left: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.info-timeline-node {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.info-timeline-node:last-child {
+    margin-bottom: 5px;
+}
+
+/* 時間軸圓點與標籤 */
+.info-timeline-node::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: #5c6bc0;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.node-badge {
+    display: inline-block;
+    background-color: #ebedfa;
+    color: #5c6bc0;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+}
+
+.node-txt {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* 手風琴內文清單微調 */
+.inner-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.inner-list li {
+    margin-bottom: 6px;
+    font-size: 14.5px;
+    color: #555;
+}
+
+.accordion-body p {
+    margin-bottom: 8px;
+}
