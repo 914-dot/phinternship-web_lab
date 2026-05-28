@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <li><a href="#">實習發表活動</a></li>
                         </ul>    
                     </li>
-                    <li><a href="FAQ.html">常見問答</a></li>
+                    <li><a href="faq.html">常見問答</a></li>
                     <li class="dropdown">
                         <a href="advocacy.html" class="dropbtn">宣導資料 ▼</a>
                         <ul class="dropdown-content">
