@@ -5,18 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>宣導資料 - 公衛實習資訊網</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/faq_style.css">
+    <link rel="stylesheet" href="./css/advocacy_style.css">
 </head>
 
 <body>
 
     <main class="container">
-        <section class="info-section">
-            <h2>宣導資料</h2>
-            <P style="color: #666; margin-bottom: 20px;"></P>
+        <div class="faq-wrapper">
 
-        </section>
+            <aside class="faq-sidebar">
+                <h3>宣導資料導覽</h3>
+                <ul>
+                    <li class="active"><a href="#section-gender">性別平等宣導</a></li>
+                    <li><a href="#section-safety">職業與勞安宣導</a></li>
+                    <li><a href="#section-resources">校內輔導資源</a></li>
+                </ul>
+            </aside>
+
+            <div class="faq-content">
+                <h2 class="faq-main-title">宣導資料專區</h2>
+
+                <div id="section-gender" class="faq-group">
+                    <h3 class="group-title">性別平等宣導</h3>
+                    <p class="section-desc-text">實習期間如遇到校園性侵害、性騷擾或性霸凌事件，請勇敢發聲並利用以下管道尋求協助，保障自身權益。</p>
+
+                    <div class="link-grid">
+                        <a href="https://gender-equality.cmu.edu.tw/" target="_blank" class="link-card">
+                            <div class="link-icon">⚖️</div>
+                            <div class="link-info">
+                                <h4>OO大學 性別平等專區</h4>
+                                <p>包含校內性平申訴管道、性平會組織架構及相關活動公告。</p>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1SpNUeS4_owCzbKxhg6lnPlhcaKi4uiMV" target="_blank" class="link-card">
+                            <div class="link-icon">📜</div>
+                            <div class="link-info">
+                                <h4>性別平等教育相關法規</h4>
+                                <p>查詢校內外性別平等教育法、防治準則等重要法律規範。</p>
+                            </div>
+                        </a>
+                        <a href="https://reurl.cc/N2m4OQ" target="_blank" class="link-card">
+                            <div class="link-icon">📣</div>
+                            <div class="link-info">
+                                <h4>校外實習期間性平申訴及調查處理</h4>
+                                <p>提供明確的申訴流程圖、申請表格下載與申訴處理窗口。</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="section-safety" class="faq-group">
+                    <h3 class="group-title">職業與勞安宣導</h3>
+                    <p class="section-desc-text">進入場域實習前，請務必了解工作環境的安全衛生規範。若實習機構另有訂定相關勞安辦法，亦須同時遵守。</p>
+
+                    <div class="link-grid">
+                        <a href="https://adm06.cmu.edu.tw/page/424" target="_blank" class="link-card">
+                            <div class="link-icon">🛡️</div>
+                            <div class="link-info">
+                                <h4>校內職業安全資訊</h4>
+                                <p>校內實驗室、實習場域安全衛生宣導與教育訓練資訊查詢。</p>
+                            </div>
+                        </a>
+                        <a href="https://www.osha.gov.tw/" target="_blank" class="link-card">
+                            <div class="link-icon">👷</div>
+                            <div class="link-info">
+                                <h4>勞動部職業安全衛生署</h4>
+                                <p>國內最新勞動安全衛生法規、實習生權益保障宣導資料。</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="section-resources" class="faq-group">
+                    <h3 class="group-title">校內輔導資源</h3>
+                    <p class="section-desc-text">實習期間若面臨心理壓力、適應不良或任何生涯困惑，學校與心理師隨時在你身後提供諮商與關懷。</p>
+
+                    <div class="link-grid">
+                        <a href="https://cmuhc.cmu.edu.tw/" target="_blank" class="link-card">
+                            <div class="link-icon">🧠</div>
+                            <div class="link-info">
+                                <h4>健康諮商中心</h4>
+                                <p>提供專業心理諮商預約、心理測驗與身心減壓關懷服務。</p>
+                            </div>
+                        </a>
+                        <a href="https://guide.cmu.edu.tw/" target="_blank" class="link-card">
+                            <div class="link-icon">🤝</div>
+                            <div class="link-info">
+                                <h4>軍訓暨生活輔導組</h4>
+                                <p>包含弱勢學生協助、學習輔導方案及各項校內資源媒合。</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
     
     <script src="./js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 左側導覽列點擊高亮與平滑滾動效果
+            const sidebarItems = document.querySelectorAll('.faq-sidebar li');
+            sidebarItems.forEach(li => {
+                li.addEventListener('click', function () {
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>

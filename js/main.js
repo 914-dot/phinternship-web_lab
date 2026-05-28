@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a href="advocacy.html" class="dropbtn">宣導資料 ▼</a>
                         <ul class="dropdown-content">
                             <li><a href="#">性平宣導</a></li>
-                            <li><a href="#">職安宣導</a></li>
+                            <li><a href="#">勞安宣導</a></li>
                             <li><a href="#">校內輔導資源</a></li>
                         </ul>
                     </li>
