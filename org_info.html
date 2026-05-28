@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單位介紹 - 公衛實習資訊網</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/org.info.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <section class="info-section">
+            <h2>單位介紹</h2>
+            <P style="color: #666; margin-bottom: 20px;"></P>
+        </section>
+
+        <section class="org-section" id="section-categories">
+            <h2><img src="./images/categoric.png" alt="categoricIcon" class="section-icon"> 實習單位類別</h2>
+            <p class="section-desc">本系配合之實習機構涵蓋廣泛，主要劃分為以下 12 大核心領域：</p>
+            
+            <div class="category-grid">
+                <div class="category-item"><span>01</span> 衛生福利部及所屬機關</div>
+                <div class="category-item"><span>02</span> 各縣市衛生局及衛生所</div>
+                <div class="category-item"><span>03</span> 各大醫學中心與區域醫院</div>
+                <div class="category-item"><span>04</span> 疾病管制與防疫相關單位</div>
+                <div class="category-item"><span>05</span> 國民健康與慢性病防治機構</div>
+                <div class="category-item"><span>06</span> 職業安全衛生與環境保護局</div>
+                <div class="category-item"><span>07</span> 社區健康促進與長照中心</div>
+                <div class="category-item"><span>08</span> 醫療科技與健康資訊公司</div>
+                <div class="category-item"><span>09</span> 生技研發與藥廠公衛部門</div>
+                <div class="category-item"><span>10</span> 非政府組織 (NGO) 與財團法人</div>
+                <div class="category-item"><span>11</span> 公共衛生相關研究室與智庫</div>
+                <div class="category-item"><span>12</span> 國外單位(海外研習)</div>
+            </div>
+        </section>
+
+        <section class="org-section" id="section-history">
+            <h2><img src="./images/history.png" alt="historyIcon" class="section-icon"> 歷年實習單位查詢</h2>
+            <p class="section-desc">請選擇欲查詢的學年度，查看當年度配合之實習單位清單：</p>
+            
+            <div class="history-controls">
+                <select id="academic-year-select" class="styled-select">
+                    <option value="114">114 學年度 (最新)</option>
+                    <option value="113">113 學年度</option>
+                    <option value="112">112 學年度</option>
+                    <option value="111">111 學年度</option>
+                    <option value="110">110 學年度</option>
+                </select>
+
+                <a href="./data/101-113學年度公衛系歷年實習單位.xlsx" class="download-btn" download>
+                    <span class="material-icons">download</span> 下載歷年實習單位總表 (.xlsx)
+                </a>
+            </div>
+
+            <div class="year-content-wrapper">
+                <div id="year-114" class="year-panel active">
+                    <h4>⏹︎ 114 學年度 實習單位清單</h4>
+                    <ul>
+                        <li>台大醫院 - 公共衛生部 (名額：2名)</li>
+                        <li>台北市政府衛生局 - 疾病管制科 (名額：3名)</li>
+                        <li>衛生福利部國民健康署 (名額：2名)</li>
+                        <li>國家衛生研究院 (名額：1名)</li>
+                    </ul>
+                </div>
+                <div id="year-113" class="year-panel">
+                    <h4>⏹︎ 113 學年度 實習單位清單</h4>
+                    <ul>
+                        <li>馬偕紀念醫院 - 社區醫學中心 (名額：2名)</li>
+                        <li>新北市政府衛生局 - 高齡長期照顧科 (名額：4名)</li>
+                        <li>環境保護署 - 空污防治組 (名跡：1名)</li>
+                    </ul>
+                </div>
+                <div id="year-112" class="year-panel">
+                    <h4>⏹︎ 112 學年度 實習單位清單</h4>
+                    <ul>
+                        <li>台北榮民總醫院 - 品質管理中心 (名額：2名)</li>
+                        <li>桃園市政府衛生局 (名額：3名)</li>
+                    </ul>
+                </div>
+                <div id="year-111" class="year-panel">
+                    <h4>⏹︎ 111 學年度 實習單位清單</h4>
+                    <ul>
+                        <li>台中榮民總醫院 - 感控小組 (名額：2名)</li>
+                        <li>高雄市政府衛生局 (名額：3名)</li>
+                    </ul>
+                </div>
+                <div id="year-110" class="year-panel">
+                    <h4>⏹︎ 110 學年度 實習單位清單</h4>
+                    <ul>
+                        <li>台大醫院 - 癌醫中心分院 (名額：1名)</li>
+                        <li>基隆市衛生所 (名額：2名)</li>
+                    </ul>
+                </div>
+
+                <div class="excel-embed-container">
+                    <p class="embed-hint">💡 提示：您也可以在下方直接瀏覽實習單位線上即時表格：</p>
+                    <div class="mock-excel-table">
+                        <iframe src="https://docs.google.com/spreadsheets/d/1ByFIumqyublpQ0MuvggpPIpmaQvpGZeV/edit?usp=drive_link&ouid=106621287661390966997&rtpof=true&sd=true" width="100%" height="300" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="org-section" id="section-regular">
+            <h2><img src="./images/regular.png" alt="regularIcon" class="section-icon"> 常態實習單位介紹</h2>
+            <p class="section-desc">以下為本系長期穩定配合、提供豐富學習資源的指標性公衛實習單位：</p>
+            
+            <div class="regular-list">
+                <div class="regular-card">
+                    <div class="regular-info">
+                        <h3>台北市政府衛生局</h3>
+                        <p class="unit-tag">公家機關 / 疾病管制 / 社區健康</p>
+                        <p class="unit-text">台北市政府衛生局主要負責首都圈的第一線公共衛生行政、傳染病防治（如登革熱、流感監測）、食品安全稽查以及高齡友善社區規劃。在此實習的同學能深入了解基層公衛體系的運作流程、衛生政策的推動與法規執行機制，是培養宏觀衛生行政視野的絕佳選擇。</p>
+                    </div>
+                    <div class="regular-img-box">
+                        <img src="./images/unit_taipei_health.jpg" alt="台北市政府衛生局" onerror="this.src='https://placehold.co/350x220?text=Taipei+Health+Bureau'">
+                    </div>
+                </div>
+
+                <div class="regular-card">
+                    <div class="regular-info">
+                        <h3>台大醫院 公共衛生部</h3>
+                        <p class="unit-tag">醫療機構 / 臨床公衛 / 院內感控</p>
+                        <p class="unit-text">作為國內頂尖醫學中心，台大醫院公共衛生部扮演著醫學與公共衛生實務鏈結的關鍵橋樑。學生將在此參與醫院感染管制、員工健康管理、院內流行病學調查以及大型社區篩檢義診。實習範疇結合了臨床數據分析與實務推廣，適合對大數據與醫院行政有興趣的同學。</p>
+                    </div>
+                    <div class="regular-img-box">
+                        <img src="./images/unit_ntu_hospital.jpg" alt="台大醫院公共衛生部" onerror="this.src='https://placehold.co/350x220?text=NTU+Hospital+PH'">
+                    </div>
+                </div>
+
+                <div class="regular-card">
+                    <div class="regular-info">
+                        <h3>衛生福利部 疾病管制署 (CDC)</h3>
+                        <p class="unit-tag">中央機關 / 流行病學 / 疫情監測</p>
+                        <p class="unit-text">疾管署為國家級傳染病防治最高機關。實習學生有機會深入疫情指揮中心（CDC），學習全國傳染病通報系統操作、國際疫情監測、疫苗接種政策評估及衛教宣導素材製作。在專業研究員帶領下，能親身體會國家在應對新興傳染病時的決策與科學證據評估過程。</p>
+                    </div>
+                    <div class="regular-img-box">
+                        <img src="./images/unit_cdc.jpg" alt="疾病管制署" onerror="this.src='https://placehold.co/350x220?text=Taiwan+CDC'">
+                    </div>
+                </div>
+
+                <div class="regular-card">
+                    <div class="regular-info">
+                        <h3>國家衛生研究院 (NHRI)</h3>
+                        <p class="unit-tag">研究機構 / 生物統計 / 政策智庫</p>
+                        <p class="unit-text">國衛院是台灣最核心的醫藥衛生學術研究智庫。實習側重於科學研究技能培養，包含全民健保資料庫分析、環境毒物健康風險評估、生物統計模型跑程式等。適合未來有志於攻讀國內外研究所、或對流行病學與生統研究有濃厚興趣的優秀學子。</p>
+                    </div>
+                    <div class="regular-img-box">
+                        <img src="./images/unit_nhri.jpg" alt="國家衛生研究院" onerror="this.src='https://placehold.co/350x220?text=NHRI+Research'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="back-to-top" class="scroll-top-btn" title="回到頂部">▲</button>
+    
+    <script src="./js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            // 1. 歷年實習單位下拉選單切換
+            const yearSelect = document.getElementById('academic-year-select');
+            const yearPanels = document.querySelectorAll('.year-panel');
+
+            if (yearSelect) {
+                yearSelect.addEventListener('change', function () {
+                    const selectedYear = this.value;
+                    
+                    // 隱藏所有面板
+                    yearPanels.forEach(panel => {
+                        panel.classList.remove('active');
+                    });
+                    
+                    // 秀出對應學年度面板
+                    const targetPanel = document.getElementById('year-' + selectedYear);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            }
+
+            // 2. 右下角回到頂部按鈕邏輯
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            if (backToTopBtn) {
+                // 當捲軸向下捲動超過 300px 就秀出按鈕，否則隱藏
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 300) {
+                        backToTopBtn.classList.add('show');
+                    } else {
+                        backToTopBtn.classList.remove('show');
+                    }
+                });
+
+                // 點擊按鈕後平滑捲動回最上方
+                backToTopBtn.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

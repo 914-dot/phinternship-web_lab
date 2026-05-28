@@ -1,0 +1,153 @@
+/* ==========================================================================
+   FAQ 雙欄版面與摺疊選單 (Accordion) 樣式
+   ========================================================================== */
+.faq-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/*  1. 左側分類選單 */
+.faq-sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 20px; /* 捲動時會吸附在頂部 */
+    flex-shrink: 0;
+}
+
+.faq-sidebar h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5c6bc0;
+}
+
+.faq-sidebar ul {
+    list-style: none;
+}
+
+.faq-sidebar li {
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.faq-sidebar li a {
+    display: block;
+    padding: 12px 15px;
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*  還原附圖：選中時的左側深藍色高亮外觀 */
+.faq-sideber li.active,faq-sidebar li:hover {
+    background-color: #eef2f7;
+}
+.faq-sidebr li.active a,.faq-sidebar li:hover a {
+    color: #5c6bc0;
+    border-left: 4px solid #5c6bc0;
+    padding-left: 11px; /*扣除邊框寬度保持對齊 */
+}
+
+/* 2. 右側內容區 */
+.faq-content {
+    flex-grow: 1;
+}
+
+.faq-main-title {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.faq-group {
+    margin-bottom: 35px;
+}
+
+.group-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/*  3. 手風琴摺疊項目 */
+.accordion-item {
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eef2f7;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3f51b5;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s
+}
+
+.accordion-header:hover {
+    background-color: #fcfdfe;
+}
+
+.icon-arrow {
+    font-size: 12px;
+    color: #999;
+    transition: transform 0.3s ease; /* 旋轉動畫 */
+}
+
+/* 摺疊內文：預設隱藏 */
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    background-color: #fafbfc;
+    padding: 0 20px;
+    color: #555;
+    line-height: 1, 7;
+    font-size: 15px;
+}
+
+/* 當被點擊加入 .active 類別實的效果 */
+.accordion-item.active .accordion-body {
+    max-height: 300px; /* 給予足夠放內文的最大高度，觸發滑出動畫 */
+    padding: 20px;
+    border-top: 1px solid #eef2f7;
+}
+
+/* 箭頭反轉動畫 */
+.accordion-item.active .icon-arrow {
+    transform: rotate(180deg);
+    color: #5c6bc0;
+}
+
+/* ==========================================================================
+   FAQ 響應式手機版微調 (RWD)
+   ========================================================================== */
+@media screen and (max-width: 900px) {
+    .faq-wrapper {
+        flex-direction: column; /* 手機版時，左側選單改為排在最上面 */
+    }
+    .faq-sidebar {
+        width: 100%;
+        position: static;
+    }
+}  
