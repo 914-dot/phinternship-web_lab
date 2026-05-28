@@ -62,9 +62,20 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     const footerHTML = `
-        <footer>
-            <p>© 2026 公衛實習資訊網. All Rights Reserved.</p>
-        </footer>
+        <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>OO大學 公共衛生學系辦公室</h4>
+                <p><span>地址：</span>406040 台中市OO區OO路</p>
+                <p><span>電話：</span>(04) 2205-3366 分機 XXXX</p>
+                <p><span>聯絡信箱：</span>ph@mail.cmu.edu.tw</p>
+                <p><span>服務時間：</span>週一至週五 08:00 - 17:00</p>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 公衛實習資訊網. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
     `;
 
     document.body.insertAdjacentHTML('afterbegin', navbarHTML);
