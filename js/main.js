@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a href="senior_ep.html" class="dropbtn">實習成果 ▼</a>
                         <ul class="dropdown-content">
                             <li><a href="senior_ep.html#section-senior">學長姐實習心得</a></li>
-                            <li><a href="senior_ep.html#section-presentation">實習發表活動</a></li>
+                            <li><a href="senior_ep.html#section-present">實習發表活動</a></li>
                         </ul>    
                     </li>
                     <li><a href="faq.html">常見問答</a></li>
