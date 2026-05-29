@@ -1,22 +1,271 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>實習成果 - 公衛實習資訊網</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/senior_ep_style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 
     <main class="container">
-        <section class="info-section">
-            <h2>實習成果</h2>
-            <P style="color: #666; margin-bottom: 20px;"></P>
 
+        <section class="page-header">
+            <h1><span class="material-icons">stars</span> 歷屆實習成果與經驗傳承</h1>
+            <p>透過學長姐的實務心得與成果展示，拓展公衛視野，規劃屬於你的實習藍圖。</p>
         </section>
+
+        <section class="info-section" id="section-senior">
+            <h2>學長姐實習心得資源</h2>
+
+            <div class="path-container">
+                <h3><span class="material-icons">cloud_download</span> 學校內部雲端下載路徑</h3>
+                <p class="path-desc">請登入學校系統入口網後，依循下列目錄尋找：</p>
+
+                <div class="path-card">
+                    <div class="path-title">歷年書面報告（依實習單位分類）</div>
+                    <div class="path-code-box">
+                        <code id="path-1">學校入口網 ➔ 網路文件 ➔ 共用文件區 ➔ 公共衛生學系 ➔ 實習資料 ➔ (依單位分類)102-115學年度公衛系學生實習書面報告</code>
+                        <button class="copy-btn" onclick="copyPath('path-1')"><span
+                                class="material-icons">content_copy</span> 複製</button>
+                    </div>
+                </div>
+
+                <div class="path-card">
+                    <div class="path-title">歷年口頭報告簡報、成果海報及成果彙整（依學年度分類）</div>
+                    <div class="path-code-box">
+                        <code id="path-2">學校入口網 ➔ 網路文件 ➔ 共用文件區 ➔ 公共衛生學系 ➔ 實習資料</code>
+                        <button class="copy-btn" onclick="copyPath('path-2')"><span
+                                class="material-icons">content_copy</span> 複製</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-container">
+                <h3><span class="material-icons">emoji_events</span> 精選優秀實習成果摘要</h3>
+                <p class="section-intro">節錄優秀學長姐的心得精華與專題海報結構，讓你搶先了解實習的實務收穫：</p>
+
+                <div class="tabs-header">
+                    <button class="tab-btn active" onclick="switchTab(event, 'student-1')">醫院行政與社區見習</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'student-2')">環境變遷與實驗研究</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'student-3')">公職衛生局與所實務</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'student-4')">醫材品保與實驗設計</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'student-5')">海外公衛與跨文化學習</button>
+                </div>
+
+                <div id="student-1" class="tab-content active">
+                    <div class="student-profile">
+                        <div class="meta-info">
+                            <span class="tag-inst">臺北市立聯合醫院陽明院區 教學研究科</span>
+                            <span class="tag-name">實習學生：鄒同學</span>
+                        </div>
+                        <h4><img src="./images/star.png" alt="starIcon" class="card-icon"> 核心實務心得節錄</h4>
+                        <p><strong>醫院行政決策旁聽：</strong>
+                            透過旁聽由院長主持的行政與醫務會議，觀察病患滿意度調查、環境清潔維護與病房感染率追蹤等實務議題。這讓我深刻體會到，公衛數據在醫院管理現場並非抽象報表，而是持續優化醫療品質與感管決策的科學依據。
+                        </p>
+                        <p><strong>醫學教育與擬真活動：</strong> 協助籌備「安寧擬真小劇場」，實際觀摩 PGY
+                            住院醫師透過標準化病人模擬，學習如何與家屬溝通安寧照護決策、瀕死期關懷與悲傷輔導，切身體會醫療行政背後的人文溫度。</p>
+                        <p><strong>跨單位社區方案：</strong> 前往神經內科失智據點為長輩設計認知延緩失能遊戲；跟隨家醫科與社區整合照護科深入老人定期健檢與居家醫療訪視，實地串聯長照與居家醫療方案。
+                        </p>
+
+                        <div class="poster-preview">
+                            <div class="poster-image-wrapper">
+                                <img src="./images/poster_zou.png" alt="鄒同學實習成果海報" class="poster-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="student-2" class="tab-content">
+                    <div class="student-profile">
+                        <div class="meta-info">
+                            <span class="tag-inst">中央研究院 環境變遷研究中心</span>
+                            <span class="tag-name">實習學生：江同學</span>
+                        </div>
+                        <h4><img src="./images/star.png" alt="starIcon" class="card-icon"> 核心實務心得節錄</h4>
+                        <p><strong>科研嚴謹態度：</strong>
+                            透過操作質譜儀(LC-MS/MS)與處理高解析數據，熟悉科學研究的嚴謹性，理解每一個看似微小的步驟都可能產生誤差，
+                            必須經過多次確認確保數據準確。
+                        </p>
+                        <p><strong>數據視覺化溝通：</strong> 學習將原始數據轉化為科學證據，體會到學術成果呈現是一種科學溝通的藝術，
+                            需兼顧專業嚴謹度與視覺易讀性。</p>
+                        <p><strong>跨領域整合：</strong> 確立了環境科學與公共衛生交會的研究方向，理解科學研究如何回應現實的環境與健康問題。
+                        </p>
+                        <div class="poster-preview">
+                            <div class="poster-image-wrapper">
+                                <img src="./images/poster_jiang.png" alt="江同學實習成果海報" class="poster-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="student-3" class="tab-content">
+                    <div class="student-profile">
+                        <div class="meta-info">
+                            <span class="tag-inst">臺中市政府衛生局 心理健康科、醫事管理科、衛生所</span>
+                            <span class="tag-name">實習學生：朱同學</span>
+                        </div>
+                        <h4><img src="./images/star.png" alt="starIcon" class="card-icon"> 核心實務心得節錄</h4>
+                        <p><strong>心理健康實務：</strong>
+                            在毒品防制股實習中了解到藥癮是一種慢性疾病，應以「人」而非「病人」的角度同理個案，
+                            發覺支持應從他們對生活的熱情出發，而非社會期待。
+                        </p>
+                        <p><strong>法規與政策連結：</strong> 在醫事管理科體會到「依法行政」的重要性，
+                            並參與醫療爭議調解會，理解「事故預防」的概念與公衛「預防勝於治療」的理念不謀而合。</p>
+                        <p><strong>第一線溝通價值：</strong> 在衛生所接觸民眾時，意識到溝通技巧與保密義務在實務中至關重要，
+                            並領悟到「你覺得沒有被需要，是因為你還沒創造出那個被需要的位置」。
+                        </p>
+                        <div class="poster-preview">
+                            <div class="poster-image-wrapper">
+                                <img src="./images/poster_chu.png" alt="朱同學實習成果海報" class="poster-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="student-4" class="tab-content">
+                    <div class="student-profile">
+                        <div class="meta-info">
+                            <span class="tag-inst">宇仁醫療器材科技股份有限公司 品保部</span>
+                            <span class="tag-name">實習學生：沈同學</span>
+                        </div>
+                        <h4><img src="./images/star.png" alt="starIcon" class="card-icon"> 核心實務心得節錄</h4>
+                        <p><strong>業界學理應用：</strong>
+                            熟悉公共衛生知識在醫材廠的實際應用，例如利用生物統計與流行病學方法協助檢測結果分析，
+                            以數據支持品質管理與改善。
+                        </p>
+                        <p><strong>實驗細節把關：</strong> 實際參與無塵室落塵量測、水質檢驗與產品功能測試，
+                            領悟到許多測試的關鍵並不在儀器運轉，而是在於前期累積的細節與準備。</p>
+                        <p><strong>稽核系統理解：</strong> 參與內部及國外客戶稽核，認識文件管理與法規遵循(如 ISO 標準)
+                            對產品合法性與公司運作的重要性。
+                        </p>
+                        <div class="poster-preview">
+                            <div class="poster-image-wrapper">
+                                <img src="./images/poster_shen.png" alt="沈同學實習成果海報" class="poster-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="student-5" class="tab-content">
+                    <div class="student-profile">
+                        <div class="meta-info">
+                            <span class="tag-inst">美國加州州立大學長灘分校 海外實習</span>
+                            <span class="tag-name">實習學生：鄭同學</span>
+                        </div>
+                        <h4><img src="./images/star.png" alt="starIcon" class="card-icon"> 核心實務心得節錄</h4>
+                        <p><strong>醫療制度反思：</strong>
+                            比較台美醫療體系，認同台灣健保的便利性，但也理解美國醫療制度的複雜性是因應其幅員廣闊與族群多元的必要架構。
+                        </p>
+                        <p><strong>專業溝通自信：</strong> 在與醫院財務長及執行長對談中，深切體會到「知識就是力量」，
+                            學得越多就越有深度與自信來表達自己。</p>
+                        <p><strong>公衛特質養成：</strong> 透過與專業醫師交流，體認到同理心、韌性以及清晰的使命感是公共衛生工作中不可或缺的特質。
+                        </p>
+                        <div class="poster-preview">
+                            <div class="poster-image-wrapper">
+                                <img src="./images/poster_zheng.png" alt="鄭同學實習成果海報" class="poster-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="info-section" id="section-presentation">
+            <h2>實習結束後的發表與傳承活動</h2>
+            <p class="section-intro">暑期實習平安結束、邁入大四上學期後，系上將舉辦三大核心發表活動。這不僅是展現豐碩成果的舞台，更是榮譽與經驗傳承的交響曲：</p>
+
+            <div class="activity-timeline">
+
+                <div class="activity-card">
+                    <div class="activity-badge badge-1">活動一</div>
+                    <div class="activity-main">
+                        <h3><img src="./images/trophy.png" alt="trophyIcon" class="card-icon"> 實習心得成果報告 <span class="time-tag">大四上學期初期</span></h3>
+                        <p class="activity-desc">
+                            這是全體大四同學正式展現暑期成果的必修舞台。每位同學將透過口頭簡報與完整書面報告，向系上審查教授及台下學弟妹發表實習期間的所學、專題成果與反思。</p>
+                        <div class="bonus-box">
+                            <span class="material-icons">card_membership</span>
+                            <span><strong>獎勵機制：</strong>
+                                報告會將由評審老師進行嚴謹評選，最終<strong>選出前三名及三位佳作</strong>，由系上頒發<strong>榮譽獎狀與實質獎勵金</strong>！</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-badge badge-2">活動二</div>
+                    <div class="activity-main">
+                        <h3><img src="./images/rocket.png" alt="rocketIcon" class="card-icon"> 公共衛生聯合年會 - 公共衛生實習論壇 <span class="time-tag">大四上學期</span></h3>
+                        <p class="activity-desc">台灣公共衛生學界每年最盛大的學術研討盛會。年會中特別設有「公共衛生系所實習經驗分享與交流」口頭發表與海報展示單元。</p>
+                        <div class="bonus-box">
+                            <span class="material-icons">military_tech</span>
+                            <span><strong>參與資格：</strong>
+                                本項對外學術發表具有極高榮譽，<strong>僅限本系實習心得成果報告之前三名優秀同學</strong>獲推派代表學系參加，與全國公衛菁英互相激盪。</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-badge badge-3">活動三</div>
+                    <div class="activity-main">
+                        <h3><img src="./images/plant.png" alt="plantIcon" class="card-icon"> 實習經驗傳承分享會 <span class="time-tag">大三選填志願前</span></h3>
+                        <p class="activity-desc">
+                            由系學會精心主辦的溫馨傳承盛會。透過大四學長姐的親身擺攤與座談經驗分享，帶領同學進一步了解醫療機構、政府衛生局、環境檢驗或醫藥產業等不同實習機構的真實工作內容、行政庶務與生活適應。
+                        </p>
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <span class="material-icons">explore</span>
+                                <div><strong>深化公衛認識</strong><br>藉由師生、學長姐與學弟妹面對面的深度討論，讓同學們對公衛各領域的職涯實務有更清楚的認識，利於未來生涯規劃。
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="material-icons">assignment_turned_in</span>
+                                <div>
+                                    <strong>精準志願選填</strong><br>特別舉辦在大三同學選填實習志願表單之前。讓大三能與大四及負責老師（周子傑老師）直接交流，不再迷茫，精準找到最適合自己的暑期實習舞台！
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
-    
+
+    <script>
+        // 1. Tab 切換功能
+        function switchTab(evt, studentId) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(studentId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // 2. 一鍵複製雲端路徑功能
+        function copyPath(elementId) {
+            var copyText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(copyText).then(function () {
+                alert("路徑已成功複製到剪貼簿！可直接貼上使用。");
+            }).catch(function (err) {
+                alert("複製失敗，請手動選取文字複製。");
+            });
+        }
+
+    </script>
+
     <script src="./js/main.js"></script>
 </body>
+
 </html>
