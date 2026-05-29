@@ -75,7 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>© 2026 公衛實習資訊網. All Rights Reserved.</p>
             </div>
         </div>
+        
     </footer>
+
+    <button id="global-scroll-top" class="scroll-top-btn" title="回到頂部">▲</button>
     `;
 
     document.body.insertAdjacentHTML('afterbegin', navbarHTML);
@@ -90,6 +93,31 @@ document.addEventListener("DOMContentLoaded", function () {
             // 當點擊漢堡按鈕時，切換 'active' 這個 class
             mobileMenuBtn.classList.toggle('is-active');
             navMenu.classList.toggle('active');
+        });
+    }
+
+    // ==========================================================================
+    // 🌟 全域回到頂部按鈕功能 (Scroll-to-Top Global Control)
+    // ==========================================================================
+    const scrollTopBtn = document.getElementById('global-scroll-top');
+
+    if (scrollTopBtn) {
+        // 監聽網頁捲動事件
+        window.addEventListener('scroll', function () {
+            // 當視窗向下捲動超過 300 像素時顯示按鈕，否則隱藏
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        // 監聽按鈕點擊事件，平滑滾動回頂部
+        scrollTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 平滑流暢的滾動效果
+            });
         });
     }
 });

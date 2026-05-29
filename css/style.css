@@ -527,3 +527,54 @@ footer {
     font-size: 13px;
     color: #7f8c8d;
 }
+
+/* ==========================================================================
+   全域固定定位：回到頂部按鈕 (Scroll to Top Button)
+   ========================================================================== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #5c6bc0;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    /* 預設隱藏並微微向下位移，準備做淡入上浮動畫 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    
+    /* 核心排版：讓內部的 Material Icon 完美置中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 滑順的過渡動畫 */
+    transition: all 0.3s ease;
+    z-index: 999; /* 確保按鈕不會被網頁其他圖表或卡片遮擋 */
+}
+
+/* 鼠標懸停（Hover）時的微互動特效 */
+.scroll-top-btn:hover {
+    background-color: #34495e; /* 微幅變亮 */
+    transform: translateY(-2px); /* 向上懸浮感 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 當 JS 偵測到捲動高度，注入 .show 類別時的顯示樣式 */
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* 回歸原位，達成淡入且往上冒出的視覺感 */
+}
+
+/* 確保內部的 Material Icons 大小適中 */
+.scroll-top-btn .material-icons {
+    font-size: 24px;
+}
