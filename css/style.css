@@ -138,27 +138,25 @@ body {
    ========================================================================== */
 .carousel-container {
     width: 100%;
-    max-width: 1900px;
-    margin: 0 auto 30px auto;
+    /* 取消原本固定的 450px 高度，讓外框由圖片的高度自動撐開 */
+    height: auto; 
     overflow: hidden;
     position: relative;
-    background-color: #eef2f7;
+    background-color: #f4f6f9; /* 圖片載入前或空檔時的精美底色 */
 }
 
 .carousel-slide {
     display: flex;
-    width: 100%;              
-    height: 280px;             
+    width: 100%;
     animation: slideAnimation 12s infinite ease-in-out;   /* 12秒一輪，無限循環 */
 }
 
 .carousel-slide img {
-    width: 100%;         
-    min-width: 100%;
-    flex-shrink: 0;
-    height: 100%;
-    object-fit: cover;     
-    display: block;
+    width: 100%;          /* 寬度 100% 自動填滿外框 */
+    flex-shrink: 0; /* 【超重要】告訴網頁無論如何都不可以擠壓到這張圖的寬度 */
+    max-width: 100%;      /* 限制圖片最大不超過自身原尺寸 */
+    height: auto;         /* 【最核心】高度設定為自動，圖片就會維持完美長寬比縮放，絕對不變形、不被裁剪 */
+    display: block;       /* 移除圖片下方常見的神秘微小空白 */
 }
 
 /* 輪播動畫時間軸控制 (每張圖停留約 3~4 秒並平滑淡移) */
